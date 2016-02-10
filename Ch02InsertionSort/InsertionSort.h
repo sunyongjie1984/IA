@@ -14,7 +14,7 @@
 // allow the same key
 
 void insertion_sort(uint64_t* A, uint64_t const n)
-{   
+{
     uint64_t key;
     int64_t i;
     // j = 2 to A.length(j 1 to n - 1)
