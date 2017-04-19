@@ -1,4 +1,4 @@
-// insertion_sort.h
+// InsertionSort.h
 #include <iostream>
 #include <stdint.h>
 // INSERTION-SORT(A)
@@ -13,7 +13,7 @@
 
 // allow the same key
 
-void insertion_sort(uint64_t* A, uint64_t const n)
+void InsertionSort(uint64_t* A, uint64_t const n)
 {
     uint64_t key;
     int64_t i;

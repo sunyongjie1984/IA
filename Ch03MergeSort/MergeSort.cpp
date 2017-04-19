@@ -13,7 +13,7 @@ using std::endl;
 
 int main()
 {
-#if __WORDSIZE == 64
+#if 64 == __WORDSIZE
     std::cout << "WORD_SIZE == 64" << std::endl;
 #endif
     int const n(10);

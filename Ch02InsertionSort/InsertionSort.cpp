@@ -13,7 +13,7 @@ int main()
         std::cout << array[i] << " ";
     }
     std::cout << std::endl;
-    insertion_sort(array, sizeof(array) / sizeof(uint64_t));
+    InsertionSort(array, sizeof(array) / sizeof(uint64_t));
     for (uint64_t i = 0; i < sizeof(array) / sizeof(uint64_t); i++)
     {
         std::cout << array[i] << " ";
