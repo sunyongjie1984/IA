@@ -85,10 +85,10 @@ public:
     }
     int64_t dequeue(T& x)
     {
-    	if (empty())
-    	{
-    		return -1;
-    	}
+        if (empty())
+        {
+            return -1;
+        }
         x = data[head];
         if (length - 1 == head)
         {
@@ -104,7 +104,7 @@ public:
     {
         while (!empty())
         {
-        	T x;
+            T x;
             dequeue(x);
         }
     }

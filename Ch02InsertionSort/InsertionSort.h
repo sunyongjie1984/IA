@@ -13,7 +13,7 @@
 
 // allow the same key
 
-void InsertionSort(uint64_t* A, uint64_t const n)
+void InsertionSort(uint64_t* const A, uint64_t const n)
 {
     uint64_t key;
     int64_t i;
