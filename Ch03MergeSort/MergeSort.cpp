@@ -17,7 +17,8 @@ int main()
     std::cout << "WORD_SIZE == 64" << std::endl;
 #endif
     int const n(10);
-    int64_t a[n] = { 9, 1, 3, 10, 7, -3, 4, 2, 5, 0 };
+    // int64_t a[n] = { 9, 1, 3, 10, 7, -3, 4, 2, 5, 0 };
+    int64_t a[n] = { 5, 2, 4, 7, 1, 3, 2, 6 };
 
     merge_sort(a, 0, n - 1);
     cout << "The sorted array is" << endl;
