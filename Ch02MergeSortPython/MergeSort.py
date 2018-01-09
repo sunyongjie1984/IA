@@ -32,8 +32,6 @@ def Merge( A, p, q, r ):
     #a = [0 for x in range(0, 1000)]
     L = [0 for x in range(0, n1 + 1)]
     R = [0 for x in range(0, n2 + 1)]
-    #L = [ n1 + 1 ];
-    #R = [ n2 + 1 ];
     for i in range( 0, n1 ):
         L[ i ] = A[ p + i ];
     for j in range( 0, n2 ):
@@ -42,16 +40,14 @@ def Merge( A, p, q, r ):
     R[ n2 ] = 999999999;
     i = 0;
     j = 0;
-    for k in range( p, r ):
+    for k in range( p, r + 1 ):
         if ( L[ i ] <= R[ j ] ):
             A[ k ] = L[ i ];
             i = i + 1;
         else:
             A[ k ] = R[ j ];
             j = j + 1;
-
-
-
+    return A;
 
 #/ MERGE-SORT(A, p, r)
 #/ if p < r
@@ -66,7 +62,7 @@ def MergeSort( A, p, r ):
         q = ( p + r ) / 2;
         MergeSort( A, p, q );
         MergeSort( A, q + 1, r );
-        Merge( A, p, q, r );
+        print Merge( A, p, q, r );
     return A;
 
 if __name__ == '__main__':
