@@ -23,57 +23,57 @@
 // Q.head = Q.head + 1
 // return x
 
-template <class T> class queue {
+template < class T > class queue {
 public:
-    queue(int64_t const n) : head(0), tail(0), length(n)
+    queue( int64_t const n ) : head( 0 ), tail( 0 ), length( n )
     {
-        data = new T[n]();
+        data = new T[ n ]( );
     }
-    bool full()
+    bool full( )
     {
-        if (head == tail + 1 || (0 == head && length == tail + 1))
+        if ( head == tail + 1 || ( 0 == head && length == tail + 1 ) )
         {
             return true;
         }
         return false;
     }
-    bool empty() { return head == tail; }
-    void print()
+    bool empty( ) { return head == tail; }
+    void print( )
     {
-        if (empty())
+        if ( empty( ) )
         {
             return ;
         }
-        if (head < tail)
+        if ( head < tail )
         {
-            for (int64_t i = head; i < tail; i++)
+            for ( int64_t i = head; i < tail; i++ )
             {
                 std::cout << data[i] << " ";
             }
         }
         else
         {
-            for (int64_t i = head; i < length; i++)
+            for ( int64_t i = head; i < length; i++ )
             {
-                std::cout << data[i] << " ";
+                std::cout << data[ i ] << " ";
             }
-            for (int64_t i = 0; i < tail; i++)
+            for ( int64_t i = 0; i < tail; i++ )
             {
-                std::cout << data[i] << " ";
+                std::cout << data[ i ] << " ";
             }
         }
         std::cout << std::endl;
         return;
     }
-    int64_t enqueue(T const x)
+    int64_t enqueue( T const x )
     {
-        if (full())
+        if ( full( ) )
         {
             std::cout << "queue is full, enqueue failed" << std::endl;
             return -1;
         }
-        data[tail] = x;
-        if (length == tail + 1)
+        data[ tail ] = x;
+        if ( length == tail + 1 )
         {
             tail = 0;
         }
@@ -83,14 +83,14 @@ public:
         }
         return 0;
     }
-    int64_t dequeue(T& x)
+    int64_t dequeue( T& x )
     {
-        if (empty())
+        if ( empty( ) )
         {
             return -1;
         }
-        x = data[head];
-        if (length - 1 == head)
+        x = data[ head ];
+        if ( length - 1 == head )
         {
             head = 0;
         }
@@ -100,12 +100,12 @@ public:
         }
         return 0;
     }
-    void clear()
+    void clear( )
     {
-        while (!empty())
+        while ( !empty( ) )
         {
             T x;
-            dequeue(x);
+            dequeue( x );
         }
     }
 private:
