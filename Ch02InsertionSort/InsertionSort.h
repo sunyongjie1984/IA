@@ -18,15 +18,15 @@ void InsertionSort( uint64_t* const A, uint64_t const n )
     uint64_t key;
     int64_t i;
     // j = 2 to A.length(j 1 to n - 1)
-    for (uint64_t j = 1; j < n; j++) // j begin with A[1]
+    for ( uint64_t j = 1; j < n; ++j ) // j begin with A[1]
     {
-        key = A[j];
+        key = A[ j ];
         i = j - 1;                   // i begin with A[0]
-        while (i >= 0 && A[i] > key)
+        while ( i >= 0 && A[i] > key )
         {
-            A[i + 1] = A[i];
-            i--;
+            A[ i + 1 ] = A[ i ];
+            --i;
         }
-        A[i + 1] = key;
+        A[ i + 1 ] = key;
     }
 }
