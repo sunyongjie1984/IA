@@ -3,3 +3,4 @@
 *.swo
 Ch03MergeSort/.gdb_history
 *.plist
+*.DS_Store
