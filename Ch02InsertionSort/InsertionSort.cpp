@@ -8,6 +8,7 @@
 int main()
 {
     uint64_t array[6] = { 5, 2, 4, 6, 1, 3 };
+
     for (uint64_t i = 0; i < sizeof(array) / sizeof(uint64_t); i++)
     {
         std::cout << array[i] << " ";
