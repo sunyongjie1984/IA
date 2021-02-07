@@ -7,3 +7,8 @@ Ch03MergeSort/.gdb_history
 *dSYM*
 InsertionSort
 InsertionSortT
+*.ncb
+*.sln
+*.suo
+*.vcproj
+*.user
