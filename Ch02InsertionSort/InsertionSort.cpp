@@ -5,6 +5,10 @@
 #include <stdio.h>
 #endif
 
+// windows7 and visual studio is for viewing code
+// just for viewing
+// and you can edit files and checkin in the mac os in macbook pro
+
 int main( )
 {
     uint64_t array[ 6 ] = { 5, 2, 4, 6, 1, 3 };
