@@ -5,6 +5,10 @@
 #include <stdio.h>
 #endif
 
+static void extracted(uint64_t *array) {
+    InsertionSort( array, sizeof( array ) / sizeof( uint64_t ) );
+}
+
 int main( )
 {
     uint64_t array[ 6 ] = { 5, 2, 4, 6, 1, 3 };
@@ -14,7 +18,7 @@ int main( )
         std::cout << array[i] << " ";
     }
     std::cout << std::endl;
-    InsertionSort( array, sizeof( array ) / sizeof( uint64_t ) );
+    extracted(array);
     for ( uint64_t i = 0; i < sizeof( array ) / sizeof( uint64_t ); ++i )
     {
         std::cout << array[ i ] << " ";
