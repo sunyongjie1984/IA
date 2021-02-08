@@ -20,13 +20,17 @@ void InsertionSort( uint64_t* const A, uint64_t const n )
     // j = 2 to A.length(j 1 to n - 1)
     for ( uint64_t j = 1; j < n; ++j ) // j begin with A[1]
     {
-        key = A[ j ];
-        i = j - 1;                   // i begin with A[0]
+        key = A[ j ]; // we are putting A[j] (key) to the right place
+        i = j - 1;    // for every A[j], compare begin the previous one
+        // very element ahead of A[j] is sorted
+        // move back one step for every element who is bigger than A[j]
         while ( i >= 0 && A[i] > key )
         {
             A[ i + 1 ] = A[ i ];
             --i;
         }
+        // after moving, A[i] is equal or less then A[j]
+        // A[j] shoule be after A[i]
         A[ i + 1 ] = key;
     }
 }
