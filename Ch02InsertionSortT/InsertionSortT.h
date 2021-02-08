@@ -16,19 +16,22 @@
 template <class Type> void insert_sort_t(Type * const a, int const & n)
 {
     Type key;
-    // j赋值为1因为是从第二个元素开始插入排序
-    // j<n因为n代表着待排序的数组元素的个数，n-1为最后一个元素
+    // assign j with 2, because we start inserting sort with the second element
+    // j < n because:
+    // 1. n stands for the number of the array
+    // 2. n - 1 a[n-1] is the last element
     for (int j = 1; j < n; j++)
     {
-        key = a[j];    // 等待插入的元素为a[j]
-        int i = j - 1; // a[0...j-1]为已经有序的部分，a[j+1...n-1]为还没有排序的部分
-        // 我们首先要比较的是a[j]与a[j-1]
+        key = a[j];    // a[j] is the element being inserted to the array
+        int i = j - 1; // a[0...j-1] are already sortted, a[j] is being sorted
+                       // a[j+1....n-1] are not sorted
+        // first compare a[j] and a[j-1]
         while ((i >= 0) && (a[i] > key))
         {
-            a[i + 1] = a[i]; // 所有比a[j]大的元素后移一位
+            a[i + 1] = a[i]; // all bigger than a[j] move back one step
             i--;
         }
-        a[i + 1] = key;      // 将a[j]放到正确的位置上去
+        a[i + 1] = key;      // put a[j] to the correct place
     }
 }
 
