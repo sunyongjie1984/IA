@@ -1,4 +1,4 @@
-// ≤Â»Î≈≈–Ú insertion_sort_t.h
+// insertion_sort_t.h
 
 #include <iostream>
 #include <string>
